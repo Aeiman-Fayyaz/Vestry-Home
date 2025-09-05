@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vestry Home</title>
+    <!-- Our Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'honey-yellow': '#fff4a4',
+                        'honey-green': '#5a7247',
+                    }
+                }
+            },
+            variants: {
+                extend: {
+                    backgroundColor: ['hover', 'group-hover'],
+                    textColor: ['hover', 'group-hover'],
+                    display: ['group-hover']
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
+    <!-- Animations AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="bg-gray-100">
+        <div class="flex overflow-hidden bg-gray-200">
+            <!-- Sidebar -->
+            <div class="fixed bg-gray-800 text-white w-56 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300 z-50"
+                id="sidebar">
+                <!-- Your Sidebar Content -->
+                <div class="p-4">
+                    <h1 class="text-2xl font-semibold">Sidebar</h1>
+                    <ul class="mt-4">
+                        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Home</a></li>
+                        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">About</a></li>
+                        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Services</a></li>
+                        <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="flex-1 flex flex-col overflow-hidden">
+                <!-- Navbar -->
+                <div class="flex justify-between items-center py-4 px-2 transition-all duration-300" id="navbar-title">
+                    <h1 class="text-xl font-semibold">VESTRY HOME</h1>
+                    <button class="text-gray-500 hover:text-gray-600" id="open-sidebar">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+    <!-- Hero Section Start -->
+    <main>
+        <div class="relative h-screen text-white overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="./Images/Home/header.png" alt="Background Image"
+                    class="object-cover object-center w-full h-full" />
+            </div>
+
+            <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
+                <p class="uppercase text-[#333333]">new arrival</p>
+                <h1 class="text-5xl text-[#054c73] font-bold leading-tight mb-4">Discover Our New Collection</h1>
+                <p class="text-lg mb-8 text-[#333333]">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptates, porro.</p>
+                <a href="#"
+                    class="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Get
+                    Started</a>
+            </div>
+        </div>
+    </main>
+    <!-- Hero Section End -->
+    <!-- Service Section Start -->
+    <section>
+
+        <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="relative cursor-pointer dark:text-white">
+                <span
+                    class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg dark:bg-gray-200"></span>
+                <div
+                    class="card relative p-0 bg-white dark:bg-gray-800 border-2 border-indigo-500 dark:border-gray-300 rounded-lg overflow-hidden">
+                    <div class="card-content p-6">
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center mr-4">
+                                <i class="fas fa-robot text-indigo-500 dark:text-indigo-300 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">AI Technology</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="relative cursor-pointer dark:text-white">
+                <span
+                    class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-500 rounded-lg dark:bg-gray-200"></span>
+                <div
+                    class="card relative p-0 bg-white dark:bg-gray-800 border-2 border-blue-500 dark:border-gray-300 rounded-lg overflow-hidden">
+                    <div class="card-content p-6">
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-blue-500 dark:text-blue-300 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Team Collaboration</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="relative cursor-pointer dark:text-white">
+                <span
+                    class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-green-500 rounded-lg dark:bg-gray-200"></span>
+                <div
+                    class="card relative p-0 bg-white dark:bg-gray-800 border-2 border-green-500 dark:border-gray-300 rounded-lg overflow-hidden">
+                    <div class="card-content p-6">
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-line text-green-500 dark:text-green-300 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Advanced Analytics</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Section End -->
+    <!-- ====== Cards Section Start -->
+    <section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6]">
+        <div class="container">
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                    <div class="bg-white rounded-lg overflow-hidden mb-10">
+                        <img src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-01.jpg" alt="image"
+                            class="w-full" />
+
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                    <div class="bg-white rounded-lg overflow-hidden mb-10">
+                        <img src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-02.jpg" alt="image"
+                            class="w-full" />
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                    <div class="bg-white rounded-lg overflow-hidden mb-10">
+                        <img src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-03.jpg" alt="image"
+                            class="w-full" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====== Cards Section End -->
+
+    <!-- Hero Section Start -->
+    <div class="relative flex flex-col items-center max-w-screen-xl px-4 mx-auto md:flex-row sm:px-6 p-8">
+        <div class="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pr-10">
+            <div class="text-left">
+                <h2
+                    class="text-4xl font-extrabold leading-10 tracking-tight text-gray-800 sm:text-5xl sm:leading-none md:text-6xl">
+                    Hero
+                    <span class="font-bold text-blue-500">Section</span>
+                    <span class="text-xl font-semibold rounded-full text-blueGray-500">2.0</span>
+                </h2>
+                <p class="max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate dignissim augue, Nullam
+                    vulputate dignissim augue.
+                </p>
+                <div class="mt-5 sm:flex md:mt-8">
+                    <div class="rounded-md shadow"><a href=""
+                            class="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-blue-500 border border-transparent rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue md:py-4 md:text-lg md:px-10">
+                            Getting started
+                        </a></div>
+                    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                        <a href=""
+                            class="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-blue-500 transition duration-150 ease-in-out bg-white border border-transparent rounded-md hover:text-blue-600 focus:outline-none focus:shadow-outline-blue md:py-4 md:text-lg md:px-10">
+                            Contribute
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center py-5 md:w-1/2 md:pb-20 md:pt-10 md:pl-10">
+            <div class="relative w-full p-3 rounded  md:p-8">
+                <div class="rounded-lg bg-white text-black w-full">
+                    <img src="https://picsum.photos/400/300" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section End -->
+    <!-- ====== Cards Section Start -->
+    <section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6]">
+        <div class="container">
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                    <div class="bg-white rounded-lg overflow-hidden mb-10">
+                        <img src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-01.jpg" alt="image"
+                            class="w-full" />
+
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                    <div class="bg-white rounded-lg overflow-hidden mb-10">
+                        <img src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-02.jpg" alt="image"
+                            class="w-full" />
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                    <div class="bg-white rounded-lg overflow-hidden mb-10">
+                        <img src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-03.jpg" alt="image"
+                            class="w-full" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====== Cards Section End -->
+    <!-- Our JS -->
+    <script src="app.js"></script>
+    <!-- Animations AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
