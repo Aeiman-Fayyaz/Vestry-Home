@@ -15,3 +15,22 @@ document.addEventListener("click", (e) => {
     navbarTitle.classList.remove("pl-56");
   }
 });
+
+// Function to toggle dropdown visibility
+function toggleDropdown() {
+  const dropdownMenu = document.getElementById("dropdownMenu");
+  // Toggle the 'hidden' class
+  dropdownMenu.classList.toggle("hidden");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function (event) {
+  const dropdownMenu = document.getElementById("dropdownMenu");
+  const dropdownButton = document.getElementById("dropdownButton");
+  if (
+    !dropdownButton.contains(event.target) &&
+    !dropdownMenu.contains(event.target)
+  ) {
+    dropdownMenu.classList.add("hidden");
+  }
+};
