@@ -34,3 +34,32 @@ window.onclick = function (event) {
     dropdownMenu.classList.add("hidden");
   }
 };
+
+// SLiding Testimonials
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
+      colors: {
+        "brand-light": "#b8946e",
+        "brand-dark": "#785437",
+      },
+      animation: {
+        // We name our animation 'scroll'. The duration can be adjusted.
+        scroll: "scroll 40s linear infinite",
+      },
+      keyframes: {
+        // We define the keyframes for our 'scroll' animation.
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          // The calculation moves the content by the width of the original set of testimonials.
+          // -18rem is the card width (w-72) and 2rem is the margin (mx-4), so 20rem total per card.
+          // We have 7 original cards, so we translate by -140rem (7 * 20rem).
+          "100%": { transform: "translateX(calc(-20rem * 7))" },
+        },
+      },
+    },
+  },
+};

@@ -1,0 +1,4 @@
+/* Sliding Testimonials */
+.group:hover .group-hover\:pause {
+  animation-play-state: paused;
+}
